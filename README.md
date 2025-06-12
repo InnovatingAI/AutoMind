@@ -1,1 +1,1 @@
-# AutoMind
+# code will be released soon.
