@@ -1,0 +1,24 @@
+{
+    "meta_info": {
+        "title": "Rapid Image Labeling via Neuro-Symbolic Learning",
+        "abstract": "The success of Computer Vision (CV) relies heavily on manually annotated\ndata. However, it is prohibitively expensive to annotate images in key domains\nsuch as healthcare, where data labeling requires significant domain expertise\nand cannot be easily delegated to crowd workers. To address this challenge, we\npropose a neuro-symbolic approach called Rapid, which infers image labeling\nrules from a small amount of labeled data provided by domain experts and\nautomatically labels unannotated data using the rules. Specifically, Rapid\ncombines pre-trained CV models and inductive logic learning to infer the\nlogic-based labeling rules. Rapid achieves a labeling accuracy of 83.33% to\n88.33% on four image labeling tasks with only 12 to 39 labeled samples. In\nparticular, Rapid significantly outperforms finetuned CV models in two highly\nspecialized tasks. These results demonstrate the effectiveness of Rapid in\nlearning from small data and its capability to generalize among different\ntasks. Code and our dataset are publicly available at\nhttps://github.com/Neural-Symbolic-Image-Labeling/",
+        "author": "Yifeng Wang, Zhi Tu, Yiwen Xiang, Shiyuan Zhou, Xiyuan Chen, Bingxuan Li, Tianyi Zhang",
+        "link": "http://arxiv.org/abs/2306.10490v1",
+        "category": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "additionl_info": "This paper was accepted by the 2023 ACM SIGKDD International  Conference on Knowledge Discovery and Data Mining"
+    },
+    "latex_extraction": {
+        "content": {
+            "section 1": {
+                "name": "Acknowledgement",
+                "content": "\nWe would like to thank the anonymous reviewers for their valuable feedback. This work was in part supported by an Amazon Research Award.\n%------------------------------------------------------------------------\n\n%------------------------------------------------------------------------\n\n%------------------------------------------------------------------------\n\n%--------------------------------------- ---------------------------------\n\n\n%%\n%% The next two lines define the bibliography style to be used, and\n%% the bibliography file.\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{mybibliography}\n% \\bibliography{sample-base}\n\n%%\n%% If your work has an appendix, this is the place to put it.\n\\appendix\n\n\\subfile{7-Appendix.tex}\n\n"
+            }
+        },
+        "figures": {
+            "fig:teaser": "\\begin{teaserfigure}\n\\centering\n\\includegraphics[width=0.83\\textwidth]{img/teaser.pdf}\n  \\caption{Two image labeling tasks from highly specialized domains and two from common domains with example labeling rules.}\n  % \\Description{Enjoying the baseball game from the third-base seats. Ichiro Suzuki preparing to bat.}\n  \\label{fig:teaser}\n\\end{teaserfigure}"
+        }
+    }
+}

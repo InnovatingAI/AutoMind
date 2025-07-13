@@ -1,0 +1,160 @@
+vars:
+  step_count: &step_count 500
+  time_limit: &time_limit 86400 # 24 hrs
+
+defaults: &defaults
+  start: mle-bench/start.sh
+  dockerfile: mle-bench/Dockerfile
+  kwargs_type: omegaconf
+  env_vars: &env_vars
+    TIME_LIMIT_SECS: *time_limit
+    STEP_LIMIT: *step_count
+    OPENAI_API_KEY: YOUR_APY_KEY
+    OPENAI_BASE_URL: YOUR_BASE_URL
+
+kwargs_common: &kwargs_common
+  agent.search.num_drafts: 5 # drafts at most 5
+  agent.search.max_debug_depth: 4 # debug down a branch for up to 4 steps
+  agent.search.debug_prob: 1 # always debug when there's something to debug
+  agent.search.hpo_prob: 0 # hyperparameter optimization probability per subtree
+  agent.search.max_hpo_prob: 0 # max total hyperparameter optimization probability
+  agent.search.trick_prob: 0.8 # trick application probability per subtree
+  agent.search.greedy_prob: 0.8 # greedy probability
+  agent.time_limit: *time_limit
+  exec.timeout: 32400 # 9 hours limit _per step_, to match max of kaggle.com
+  copy_data: False # use symbolic links
+
+automind:
+  <<: *defaults
+  kwargs:
+    <<: *kwargs_common
+    agent.steps: *step_count
+
+    agent.retriever.strategy: tricks
+    agent.retriever.model: gpt-4.1-mini-2025-04-14
+
+    agent.analyzer.strategy: preview
+    agent.analyzer.model: gpt-4.1-mini-2025-04-14
+
+    agent.planner.strategy: one-shot
+    agent.planner.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.coder.strategy: mixture
+    agent.coder.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.improver.strategy: one-shot
+    agent.improver.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.verifier.strategy: submission
+    agent.verifier.model: gpt-4.1-mini-2025-04-14
+
+  env_vars:
+    <<: *env_vars
+
+automind/o3-mini:
+  <<: *defaults
+  kwargs:
+    <<: *kwargs_common
+    agent.steps: *step_count
+
+    agent.retriever.strategy: tricks
+    agent.retriever.model: gpt-4.1-mini-2025-04-14
+
+    agent.analyzer.strategy: preview
+    agent.analyzer.model: gpt-4.1-mini-2025-04-14
+
+    agent.planner.strategy: one-shot
+    agent.planner.model: o3-mini-2025-01-31
+
+    agent.coder.strategy: mixture
+    agent.coder.model: o3-mini-2025-01-31
+
+    agent.improver.strategy: one-shot
+    agent.improver.model: o3-mini-2025-01-31
+
+    agent.verifier.strategy: submission
+    agent.verifier.model: gpt-4.1-mini-2025-04-14
+
+  env_vars:
+    <<: *env_vars
+
+automind-oneshot:
+  <<: *defaults
+  kwargs:
+    <<: *kwargs_common
+    agent.steps: *step_count
+
+    agent.retriever.strategy: tricks
+    agent.retriever.model: gpt-4.1-mini-2025-04-14
+
+    agent.analyzer.strategy: preview
+    agent.analyzer.model: gpt-4.1-mini-2025-04-14
+
+    agent.planner.strategy: one-shot
+    agent.planner.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.coder.strategy: one-shot
+    agent.coder.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.improver.strategy: one-shot
+    agent.improver.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.verifier.strategy: submission
+    agent.verifier.model: gpt-4.1-mini-2025-04-14
+
+  env_vars:
+    <<: *env_vars
+
+automind-sbs:
+  <<: *defaults
+  kwargs:
+    <<: *kwargs_common
+    agent.steps: *step_count
+
+    agent.retriever.strategy: tricks
+    agent.retriever.model: gpt-4.1-mini-2025-04-14
+
+    agent.analyzer.strategy: preview
+    agent.analyzer.model: gpt-4.1-mini-2025-04-14
+
+    agent.planner.strategy: one-shot
+    agent.planner.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.coder.strategy: step-by-step
+    agent.coder.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.improver.strategy: one-shot
+    agent.improver.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.verifier.strategy: submission
+    agent.verifier.model: gpt-4.1-mini-2025-04-14
+
+  env_vars:
+    <<: *env_vars
+
+automind-w/o-knowledge:
+  <<: *defaults
+  kwargs:
+    <<: *kwargs_common
+    agent.steps: *step_count
+
+    agent.retriever.strategy: none
+    agent.retriever.model: gpt-4.1-mini-2025-04-14
+
+    agent.analyzer.strategy: preview
+    agent.analyzer.model: gpt-4.1-mini-2025-04-14
+
+    agent.planner.strategy: one-shot
+    agent.planner.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.coder.strategy: mixture
+    agent.coder.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.improver.strategy: one-shot
+    agent.improver.model: DMXAPI-HuoShan-DeepSeek-V3
+
+    agent.verifier.strategy: submission
+    agent.verifier.model: gpt-4.1-mini-2025-04-14
+
+  env_vars:
+    <<: *env_vars

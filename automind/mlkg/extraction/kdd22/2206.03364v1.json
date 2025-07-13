@@ -1,0 +1,39 @@
+{
+    "meta_info": {
+        "title": "KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular  Property Prediction",
+        "abstract": "Designing accurate deep learning models for molecular property prediction\nplays an increasingly essential role in drug and material discovery. Recently,\ndue to the scarcity of labeled molecules, self-supervised learning methods for\nlearning generalizable and transferable representations of molecular graphs\nhave attracted lots of attention. In this paper, we argue that there exist two\nmajor issues hindering current self-supervised learning methods from obtaining\ndesired performance on molecular property prediction, that is, the ill-defined\npre-training tasks and the limited model capacity. To this end, we introduce\nKnowledge-guided Pre-training of Graph Transformer (KPGT), a novel\nself-supervised learning framework for molecular graph representation learning,\nto alleviate the aforementioned issues and improve the performance on the\ndownstream molecular property prediction tasks. More specifically, we first\nintroduce a high-capacity model, named Line Graph Transformer (LiGhT), which\nemphasizes the importance of chemical bonds and is mainly designed to model the\nstructural information of molecular graphs. Then, a knowledge-guided\npre-training strategy is proposed to exploit the additional knowledge of\nmolecules to guide the model to capture the abundant structural and semantic\ninformation from large-scale unlabeled molecular graphs. Extensive\ncomputational tests demonstrated that KPGT can offer superior performance over\ncurrent state-of-the-art methods on several molecular property prediction\ntasks.",
+        "author": "Han Li, Dan Zhao, Jianyang Zeng",
+        "link": "http://arxiv.org/abs/2206.03364v1",
+        "category": [
+            "q-bio.BM",
+            "cs.AI",
+            "cs.LG",
+            "physics.chem-ph"
+        ],
+        "additionl_info": "11 pages, to appear in KDD 2022 research track"
+    },
+    "latex_extraction": {
+        "content": {
+            "section 1": {
+                "name": "Introduction",
+                "content": "\n    \\input{sections/introduction}\n    \\label{sections:introduction}\n\n"
+            },
+            "section 2": {
+                "name": "Related Work",
+                "content": "\n    \\input{sections/related_work}\n    \\label{sections:related_work}\n    \n"
+            },
+            "section 3": {
+                "name": "Knowledge-Guided Pre-training of Graph Transformer (KGPT)",
+                "content": "\n    \\input{sections/method}\n    \\label{sections:method}\n    \n"
+            },
+            "section 4": {
+                "name": "Experiments",
+                "content": "\n    \\input{sections/experiments}\n    \\label{sections:experiments}\n    \n"
+            },
+            "section 5": {
+                "name": "Conclusion",
+                "content": " \n    \\input{sections/conclusion}\n    \\label{sections:conclusion}\n\\begin{acks}\n    \\label{sections:acknowledge}\n    This work was supported in part by the National Key Research and Development Program of China (2021YFF1201300), the National Natural Science Foundation of China (61872216, T2125007 to JZ, 31900862 to DZ), the Turing AI Institute of Nanjing, and the Tsinghua-Toyota Joint Research Fund.\n\\end{acks}\n\n%%\n%% The next two lines define the bibliography style to be used, and\n%% the bibliography file.\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{sample-base}\n\\newpage\n\\appendix\n    \\input{sections/appendix}\n    \\label{sections:appendix}\n\n"
+            }
+        }
+    }
+}

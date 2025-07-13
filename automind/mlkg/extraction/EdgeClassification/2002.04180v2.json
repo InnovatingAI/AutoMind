@@ -1,0 +1,15 @@
+{
+    "meta_info": {
+        "title": "LoCEC: Local Community-based Edge Classification in Large Online Social  Networks",
+        "abstract": "Relationships in online social networks often imply social connections in the\nreal world. An accurate understanding of relationship types benefits many\napplications, e.g. social advertising and recommendation. Some recent attempts\nhave been proposed to classify user relationships into predefined types with\nthe help of pre-labeled relationships or abundant interaction features on\nrelationships. Unfortunately, both relationship feature data and label data are\nvery sparse in real social platforms like WeChat, rendering existing methods\ninapplicable. In this paper, we present an in-depth analysis of WeChat\nrelationships to identify the major challenges for the relationship\nclassification task. To tackle the challenges, we propose a Local\nCommunity-based Edge Classification (LoCEC) framework that classifies user\nrelationships in a social network into real-world social connection types.\nLoCEC enforces a three-phase processing, namely local community detection,\ncommunity classification and relationship classification, to address the\nsparsity issue of relationship features and relationship labels. Moreover,\nLoCEC is designed to handle large-scale networks by allowing parallel and\ndistributed processing. We conduct extensive experiments on the real-world\nWeChat network with hundreds of billions of edges to validate the effectiveness\nand efficiency of LoCEC.",
+        "author": "Chonggang Song, Qian Lin, Guohui Ling, Zongyi Zhang, Hongzhao Chen, Jun Liao, Chuan Chen",
+        "link": "http://arxiv.org/abs/2002.04180v2",
+        "category": [
+            "cs.SI",
+            "cs.LG",
+            "stat.ML"
+        ],
+        "additionl_info": ""
+    },
+    "latex_extraction": {}
+}

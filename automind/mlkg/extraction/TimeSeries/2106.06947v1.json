@@ -1,0 +1,16 @@
+{
+    "meta_info": {
+        "title": "Graph Neural Network-Based Anomaly Detection in Multivariate Time Series",
+        "abstract": "Given high-dimensional time series data (e.g., sensor data), how can we\ndetect anomalous events, such as system faults and attacks? More challengingly,\nhow can we do this in a way that captures complex inter-sensor relationships,\nand detects and explains anomalies which deviate from these relationships?\nRecently, deep learning approaches have enabled improvements in anomaly\ndetection in high-dimensional datasets; however, existing methods do not\nexplicitly learn the structure of existing relationships between variables, or\nuse them to predict the expected behavior of time series. Our approach combines\na structure learning approach with graph neural networks, additionally using\nattention weights to provide explainability for the detected anomalies.\nExperiments on two real-world sensor datasets with ground truth anomalies show\nthat our method detects anomalies more accurately than baseline approaches,\naccurately captures correlations between sensors, and allows users to deduce\nthe root cause of a detected anomaly.",
+        "author": "Ailin Deng, Bryan Hooi",
+        "link": "http://arxiv.org/abs/2106.06947v1",
+        "category": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "additionl_info": "Accepted at AAAI Conference on Artificial Intelligence (AAAI), 2021"
+    },
+    "latex_extraction": {
+        "git_link": "https://github.com/d-ailin/GDN"
+    }
+}

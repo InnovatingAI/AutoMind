@@ -1,0 +1,132 @@
+{
+    "Computer Vision": {
+        "description": "Focuses on the analysis and interpretation of image and video data, encompassing tasks such as image classification and object detection.",
+        "category": [
+            "Image Classification",
+            "Object Detection",
+            "3D Object Detection",
+            "3D Reconstruction",
+            "Image Segmentation",
+            "Image Retrieval",
+            "Feature Point Detection",
+            "Pose Estimation",
+            "Gesture Recognition",
+            "Image-to-Image Translation",
+            "Image Generation",
+            "Optical Character Recognition",
+            "Video Classification",
+            "Video Analysis", 
+            "Video Generation",
+            "Video Segmentation"
+        ]
+    },
+    "Natural Language Processing": {
+        "description": "Engages in the processing and comprehension of textual data, commonly applied in tasks such as information extraction, sentiment analysis, and text generation.",
+        "category": [
+            "Text Classification",
+            "Named Entity Recognition",
+            "Relation Extraction",
+            "Event Detection",
+            "Coreference Resolution",
+            "Text Normalization",
+            "Semantic Similarity",
+            "Information Retrieval",
+            "Sentiment Analysis",
+            "Text Generation",
+            "Question Answering"
+        ]
+    },
+    "Cross-Modal Processing": {
+        "description": "Concerns the processing of data across different modalities, including text-image integration and multimodal learning.",
+        "category": [
+            "Image Captioning",
+            "Text-to-Image",
+            "Image-to-Text", 
+            "Visual Question Answering",
+            "Multi-modal Learning",
+            "Multimodal Fusion Classification"
+        ]
+    },
+    "Signal Processing": {
+        "description": "Involves the analysis and manipulation of signal data, including audio and biomedical signals.",
+        "category": [
+            "Audio Classification",
+            "Echo Cancellation",
+            "Biomedical Signal Processing",
+            "Biometric Recognition",
+            "Radar and Sonar Signal Processing"
+        ]
+    },
+    "Sequential Modeling": {
+        "description": "Addresses the modeling and analysis of time series or other sequential data.",
+        "category": [
+            "Time Series Forecasting",
+            "Probabilistic Forecasting",
+            "Time Series Classification",
+            "Event Detection in Sequences",
+            "Trajectory Prediction",
+            "Survival Analysis"
+        ]
+    },
+    "Recommender Systems": {
+        "description": "Focuses on the development of systems that recommend products or content based on user behavior and preferences.",
+        "category": [
+            "Collaborative Filtering",
+            "Content-Based Filtering",
+            "Click-Through Rate Prediction",
+            "Recommendation Ranking",
+            "Hybrid Recommender Systems",
+            "Context-Aware Recommender Systems",
+            "Multi-criteria Recommender Systems"
+        ]
+    },
+    "Reinforcement Learning": {
+        "description": "Investigates how agents learn optimal policies through interactions with their environment.",
+        "category": [
+            "Multi-Agent Systems",
+            "Bandit Optimization",
+            "Policy Learning",
+            "Imitation Learning"
+        ]
+    },
+    "Graph Learning": {
+        "description": "Centers on the learning and analysis of graph-structured data.",
+        "category": [
+            "Node Classification",
+            "Link Prediction",
+            "Path Prediction",
+            "Graph Embedding",
+            "Heterogeneous Graph",
+            "Graph Domain Adaptation"
+        ]
+    },
+    "Anomaly Detection": {
+        "description": "Primarily focused on identifying anomalies or outliers within data sets.",
+        "category": [
+            "Point Anomaly Detection",
+            "Contextual Anomaly Detection",
+            "Collective Anomaly Detection"
+        ]
+    },
+    "Security and Privacy": {
+        "description": "Examines data security and privacy issues, such as cybersecurity and AI security, with an emphasis on attack and defense algorithms.",
+        "category": [
+            "Cryptography",
+            "Cybersecurity",
+            "AI Security"
+        ]
+    },
+    "General Machine Learning": {
+        "description": "Covers a range of generalizable tasks in machine learning that do not specify a particular application, such as regression, classification, feature selection, and representation learning.",
+        "category": [
+            "Regression",
+            "Classification",
+            "Model Regularization",
+            "Feature Selection",
+            "Transfer Learning",
+            "Representation Learning",
+            "Contrastive Learning",
+            "Ensemble Learning"
+        ]
+    }
+}

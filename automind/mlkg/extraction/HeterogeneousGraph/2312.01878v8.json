@@ -1,0 +1,13 @@
+{
+    "meta_info": {
+        "title": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot  Prompt Learning",
+        "abstract": "Graph neural networks (GNNs) and heterogeneous graph neural networks (HGNNs)\nare prominent techniques for homogeneous and heterogeneous graph representation\nlearning, yet their performance in an end-to-end supervised framework greatly\ndepends on the availability of task-specific supervision. To reduce the\nlabeling cost, pre-training on self-supervised pretext tasks has become a\npopular paradigm,but there is often a gap between the pre-trained model and\ndownstream tasks, stemming from the divergence in their objectives. To bridge\nthe gap, prompt learning has risen as a promising direction especially in\nfew-shot settings, without the need to fully fine-tune the pre-trained model.\nWhile there has been some early exploration of prompt-based learning on graphs,\nthey primarily deal with homogeneous graphs, ignoring the heterogeneous graphs\nthat are prevalent in downstream applications. In this paper, we propose\nHGPROMPT, a novel pre-training and prompting framework to unify not only\npre-training and downstream tasks but also homogeneous and heterogeneous graphs\nvia a dual-template design. Moreover, we propose dual-prompt in HGPROMPT to\nassist a downstream task in locating the most relevant prior to bridge the gaps\ncaused by not only feature variations but also heterogeneity differences across\ntasks. Finally, we thoroughly evaluate and analyze HGPROMPT through extensive\nexperiments on three public datasets.",
+        "author": "Xingtong Yu, Yuan Fang, Zemin Liu, Xinming Zhang",
+        "link": "http://arxiv.org/abs/2312.01878v8",
+        "category": [
+            "cs.LG"
+        ],
+        "additionl_info": "AAAI2024 main track"
+    },
+    "latex_extraction": {}
+}

@@ -1,0 +1,57 @@
+{
+    "meta_info": {
+        "title": "Adaptive Fairness-Aware Online Meta-Learning for Changing Environments",
+        "abstract": "The fairness-aware online learning framework has arisen as a powerful tool\nfor the continual lifelong learning setting. The goal for the learner is to\nsequentially learn new tasks where they come one after another over time and\nthe learner ensures the statistic parity of the new coming task across\ndifferent protected sub-populations (e.g. race and gender). A major drawback of\nexisting methods is that they make heavy use of the i.i.d assumption for data\nand hence provide static regret analysis for the framework. However, low static\nregret cannot imply a good performance in changing environments where tasks are\nsampled from heterogeneous distributions. To address the fairness-aware online\nlearning problem in changing environments, in this paper, we first construct a\nnovel regret metric FairSAR by adding long-term fairness constraints onto a\nstrongly adapted loss regret. Furthermore, to determine a good model parameter\nat each round, we propose a novel adaptive fairness-aware online meta-learning\nalgorithm, namely FairSAOML, which is able to adapt to changing environments in\nboth bias control and model precision. The problem is formulated in the form of\na bi-level convex-concave optimization with respect to the model's primal and\ndual parameters that are associated with the model's accuracy and fairness,\nrespectively. The theoretic analysis provides sub-linear upper bounds for both\nloss regret and violation of cumulative fairness constraints. Our experimental\nevaluation on different real-world datasets with settings of changing\nenvironments suggests that the proposed FairSAOML significantly outperforms\nalternatives based on the best prior online learning approaches.",
+        "author": "Chen Zhao, Feng Mi, Xintao Wu, Kai Jiang, Latifur Khan, Feng Chen",
+        "link": "http://arxiv.org/abs/2205.11264v2",
+        "category": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "additionl_info": "Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery  and Data Mining (KDD), 2022. arXiv admin note: text overlap with  arXiv:2108.09435"
+    },
+    "latex_extraction": {
+        "content": {
+            "section 1": {
+                "name": "Introduction",
+                "content": "\n\\label{sec:intro}\n    \\input{intro}\n\n"
+            },
+            "section 2": {
+                "name": "Related Work",
+                "content": "\n\\label{sec:relatedwork}\n    \\input{related}\n\n"
+            },
+            "section 3": {
+                "name": "Preliminaries",
+                "content": "\n\\label{sec:preliminaries}\n    \\input{preliminaries}\n\n\n"
+            },
+            "section 4": {
+                "name": "Methodology",
+                "content": "\n\\label{sec:methodology}\n    \\input{methodology}\n\n% \\vspace{-3mm}    \n"
+            },
+            "section 5": {
+                "name": "Analysis",
+                "content": "\n\\label{sec:analysis}\n    \\input{analysis}\n\n"
+            },
+            "section 6": {
+                "name": "Experimental Settings",
+                "content": "\n\\label{sec:experiments}\n    \\input{experiments}\n\n% \\vspace{-3mm}\n"
+            },
+            "section 7": {
+                "name": "Results",
+                "content": "\n\\label{sec:results}\n    \\input{results}\n\n% \\vspace{-3mm}\n"
+            },
+            "section 8": {
+                "name": "Conclusion",
+                "content": "\n\\label{sec:conclusion}\n    \\input{conclusions}\n\n%%\n%% The acknowledgments section is defined using the \"acks\" environment\n%% (and NOT an unnumbered section). This ensures the proper\n%% identification of the section in the article metadata, and the\n%% consistent spelling of the heading.\n\n% \\vspace{-3mm}\n\\begin{acks}\n\\begin{sloppypar}\nThe research reported herein was supported by the National Science Foundation (NSF) under grant number OAC-1931541, 2147375, 2137335, IIS-1954376, IIS-1815696, Army Research Office Contract W911NF2110032, and IBM faculty award (Research).\n\\end{sloppypar}\n\\end{acks}\n\n%%\n%% The next two lines define the bibliography style to be used, and\n%% the bibliography file.\n\\vspace{-3mm}\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{references}\n\n%%\n%% If your work has an appendix, this is the place to put it.\n\\newpage\n\\newpage\n\\appendix\n"
+            },
+            "section 9": {
+                "name": "Additional Experiment Details",
+                "content": "\n\\label{App:ExpDetails}\n    \\input{App_ExpDetails}\n\n"
+            },
+            "section 10": {
+                "name": "main theorem",
+                "content": "\n\\label{App:proof}\n    \\input{App_Proof}\n\n\n"
+            }
+        }
+    }
+}

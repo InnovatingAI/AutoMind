@@ -1,0 +1,17 @@
+{
+    "meta_info": {
+        "title": "Heterogeneous Graph Transformer",
+        "abstract": "Recent years have witnessed the emerging success of graph neural networks\n(GNNs) for modeling structured data. However, most GNNs are designed for\nhomogeneous graphs, in which all nodes and edges belong to the same types,\nmaking them infeasible to represent heterogeneous structures. In this paper, we\npresent the Heterogeneous Graph Transformer (HGT) architecture for modeling\nWeb-scale heterogeneous graphs. To model heterogeneity, we design node- and\nedge-type dependent parameters to characterize the heterogeneous attention over\neach edge, empowering HGT to maintain dedicated representations for different\ntypes of nodes and edges. To handle dynamic heterogeneous graphs, we introduce\nthe relative temporal encoding technique into HGT, which is able to capture the\ndynamic structural dependency with arbitrary durations. To handle Web-scale\ngraph data, we design the heterogeneous mini-batch graph sampling\nalgorithm---HGSampling---for efficient and scalable training. Extensive\nexperiments on the Open Academic Graph of 179 million nodes and 2 billion edges\nshow that the proposed HGT model consistently outperforms all the\nstate-of-the-art GNN baselines by 9%--21% on various downstream tasks.",
+        "author": "Ziniu Hu, Yuxiao Dong, Kuansan Wang, Yizhou Sun",
+        "link": "http://arxiv.org/abs/2003.01332v1",
+        "category": [
+            "cs.LG",
+            "cs.SI",
+            "stat.ML"
+        ],
+        "additionl_info": "Published on WWW 2020"
+    },
+    "latex_extraction": {
+        "git_link": "https://github.com/Jhy1993/HAN"
+    }
+}

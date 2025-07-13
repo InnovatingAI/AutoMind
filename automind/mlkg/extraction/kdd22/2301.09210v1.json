@@ -1,0 +1,49 @@
+{
+    "meta_info": {
+        "title": "Debiasing the Cloze Task in Sequential Recommendation with Bidirectional  Transformers",
+        "abstract": "Bidirectional Transformer architectures are state-of-the-art sequential\nrecommendation models that use a bi-directional representation capacity based\non the Cloze task, a.k.a. Masked Language Modeling. The latter aims to predict\nrandomly masked items within the sequence. Because they assume that the true\ninteracted item is the most relevant one, an exposure bias results, where\nnon-interacted items with low exposure propensities are assumed to be\nirrelevant. The most common approach to mitigating exposure bias in\nrecommendation has been Inverse Propensity Scoring (IPS), which consists of\ndown-weighting the interacted predictions in the loss function in proportion to\ntheir propensities of exposure, yielding a theoretically unbiased learning. In\nthis work, we argue and prove that IPS does not extend to sequential\nrecommendation because it fails to account for the temporal nature of the\nproblem. We then propose a novel propensity scoring mechanism, which can\ntheoretically debias the Cloze task in sequential recommendation. Finally we\nempirically demonstrate the debiasing capabilities of our proposed approach and\nits robustness to the severity of exposure bias.",
+        "author": "Khalil Damak, Sami Khenissi, Olfa Nasraoui",
+        "link": "http://arxiv.org/abs/2301.09210v1",
+        "category": [
+            "cs.LG",
+            "cs.IR"
+        ],
+        "additionl_info": "10 pages, 3 figures, Accepted at KDD '22"
+    },
+    "latex_extraction": {
+        "content": {
+            "section 1": {
+                "name": "Acknowledgments",
+                "content": "\n\nIdentification of funding sources and other support, and thanks to\nindividuals and groups that assisted in the research and the\npreparation of the work should be included in an acknowledgment\nsection, which is placed just before the reference section in your\ndocument.\n\nThis section has a special environment:\n\\begin{verbatim}\n  \\begin{acks}\n  ...\n  \\end{acks}\n\\end{verbatim}\nso that the information contained therein can be more easily collected\nduring the article metadata extraction phase, and to ensure\nconsistency in the spelling of the section heading.\n\nAuthors should not prepare this section as a numbered or unnumbered {\\verb|\\section|}; please use the ``{\\verb|acks|}'' environment.\n\n"
+            },
+            "section 2": {
+                "name": "Appendices",
+                "content": "\n\nIf your work needs an appendix, add it before the\n``\\verb|\\end{document}|'' command at the conclusion of your source\ndocument.\n\nStart the appendix with the ``\\verb|appendix|'' command:\n\\begin{verbatim}\n  \\appendix\n\\end{verbatim}\nand note that in the appendix, sections are lettered, not\nnumbered. This document has two appendices, demonstrating the section\nand subsection identification method.\n\n"
+            },
+            "section 3": {
+                "name": "Multi-language papers",
+                "content": "\n\nPapers may be written in languages other than English or include\ntitles, subtitles, keywords and abstracts in different languages (as a\nrule, a paper in a language other than English should include an\nEnglish title and an English abstract).  Use \\verb|language=...| for\nevery language used in the paper.  The last language indicated is the\nmain language of the paper.  For example, a French paper with\nadditional titles and abstracts in English and German may start with\nthe following command\n\\begin{verbatim}\n\\documentclass[sigconf, language=english, language=german,\n               language=french]{acmart}\n\\end{verbatim}\n\nThe title, subtitle, keywords and abstract will be typeset in the main\nlanguage of the paper.  The commands \\verb|\\translatedXXX|, \\verb|XXX|\nbegin title, subtitle and keywords, can be used to set these elements\nin the other languages.  The environment \\verb|translatedabstract| is\nused to set the translation of the abstract.  These commands and\nenvironment have a mandatory first argument: the language of the\nsecond argument.  See \\verb|sample-sigconf-i13n.tex| file for examples\nof their usage.\n\n"
+            },
+            "section 4": {
+                "name": "SIGCHI Extended Abstracts",
+                "content": "\n\nThe ``\\verb|sigchi-a|'' template style (available only in \\LaTeX\\ and\nnot in Word) produces a landscape-orientation formatted article, with\na wide left margin. Three environments are available for use with the\n``\\verb|sigchi-a|'' template style, and produce formatted output in\nthe margin:\n\\begin{itemize}\n\\item {\\verb|sidebar|}:  Place formatted text in the margin.\n\\item {\\verb|marginfigure|}: Place a figure in the margin.\n\\item {\\verb|margintable|}: Place a table in the margin.\n\\end{itemize}\n\n%%\n%% The acknowledgments section is defined using the \"acks\" environment\n%% (and NOT an unnumbered section). This ensures the proper\n%% identification of the section in the article metadata, and the\n%% consistent spelling of the heading.\n\\begin{acks}\nTo Robert, for the bagels and explaining CMYK and color spaces.\n\\end{acks}\n\n%%\n%% The next two lines define the bibliography style to be used, and\n%% the bibliography file.\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{sample-base}\n\n%%\n%% If your work has an appendix, this is the place to put it.\n\\appendix\n\n"
+            },
+            "section 5": {
+                "name": "Research Methods",
+                "content": "\n\n",
+                "subsection 5.1": {
+                    "name": "Part One",
+                    "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi\nmalesuada, quam in pulvinar varius, metus nunc fermentum urna, id\nsollicitudin purus odio sit amet enim. Aliquam ullamcorper eu ipsum\nvel mollis. Curabitur quis dictum nisl. Phasellus vel semper risus, et\nlacinia dolor. Integer ultricies commodo sem nec semper.\n\n"
+                },
+                "subsection 5.2": {
+                    "name": "Part Two",
+                    "content": "\n\nEtiam commodo feugiat nisl pulvinar pellentesque. Etiam auctor sodales\nligula, non varius nibh pulvinar semper. Suspendisse nec lectus non\nipsum convallis congue hendrerit vitae sapien. Donec at laoreet\neros. Vivamus non purus placerat, scelerisque diam eu, cursus\nante. Etiam aliquam tortor auctor efficitur mattis.\n\n"
+                }
+            },
+            "section 6": {
+                "name": "Online Resources",
+                "content": "\n\nNam id fermentum dui. Suspendisse sagittis tortor a nulla mollis, in\npulvinar ex pretium. Sed interdum orci quis metus euismod, et sagittis\nenim maximus. Vestibulum gravida massa ut felis suscipit\ncongue. Quisque mattis elit a risus ultrices commodo venenatis eget\ndui. Etiam sagittis eleifend elementum.\n\nNam interdum magna at lectus dignissim, ac dignissim lorem\nrhoncus. Maecenas eu arcu ac neque placerat aliquam. Nunc pulvinar\nmassa et mattis lacinia.\n\n"
+            }
+        }
+    }
+}

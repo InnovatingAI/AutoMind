@@ -1,0 +1,23 @@
+{
+    "meta_info": {
+        "title": "Multi-Variate Time Series Forecasting on Variable Subsets",
+        "abstract": "We formulate a new inference task in the domain of multivariate time series\nforecasting (MTSF), called Variable Subset Forecast (VSF), where only a small\nsubset of the variables is available during inference. Variables are absent\nduring inference because of long-term data loss (eg. sensor failures) or high\n-> low-resource domain shift between train / test. To the best of our\nknowledge, robustness of MTSF models in presence of such failures, has not been\nstudied in the literature. Through extensive evaluation, we first show that the\nperformance of state of the art methods degrade significantly in the VSF\nsetting. We propose a non-parametric, wrapper technique that can be applied on\ntop any existing forecast models. Through systematic experiments across 4\ndatasets and 5 forecast models, we show that our technique is able to recover\nclose to 95\\% performance of the models even when only 15\\% of the original\nvariables are present.",
+        "author": "Jatin Chauhan, Aravindan Raghuveer, Rishi Saket, Jay Nandy, Balaraman Ravindran",
+        "link": "http://arxiv.org/abs/2206.12626v1",
+        "category": [
+            "cs.LG"
+        ]
+    },
+    "latex_extraction": {
+        "content": {
+            "section 1": {
+                "name": "Acknowledgments",
+                "content": "\n\nIdentification of funding sources and other support, and thanks to\nindividuals and groups that assisted in the research and the\npreparation of the work should be included in an acknowledgment\nsection, which is placed just before the reference section in your\ndocument.\n\nThis section has a special environment:\n\\begin{verbatim}\n  \\begin{acks}\n  ...\n  \\end{acks}\n\\end{verbatim}\nso that the information contained therein can be more easily collected\nduring the article metadata extraction phase, and to ensure\nconsistency in the spelling of the section heading.\n\nAuthors should not prepare this section as a numbered or unnumbered {\\verb|\\section|}; please use the ``{\\verb|acks|}'' environment.\n\n"
+            },
+            "section 2": {
+                "name": "Appendices",
+                "content": "\n\nIf your work needs an appendix, add it before the\n"
+            }
+        }
+    }
+}

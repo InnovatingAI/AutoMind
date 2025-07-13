@@ -1,0 +1,16 @@
+aptos2019-blindness-detection
+random-acts-of-pizza
+spooky-author-identification
+google-quest-challenge
+stanford-covid-vaccine
+predict-volcanic-eruptions-ingv-oe
+lmsys-chatbot-arena
+us-patent-phrase-to-phrase-matching
+mlsp-2013-birds
+statoil-iceberg-classifier-challenge
+petfinder-pawpularity-score
+tensorflow-speech-recognition-challenge
+denoising-dirty-documents
+new-york-city-taxi-fare-prediction
+tgs-salt-identification-challenge
+ventilator-pressure-prediction

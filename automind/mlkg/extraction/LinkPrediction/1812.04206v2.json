@@ -1,0 +1,13 @@
+{
+    "meta_info": {
+        "title": "GC-LSTM: Graph Convolution Embedded LSTM for Dynamic Link Prediction",
+        "abstract": "Dynamic link prediction is a research hot in complex networks area,\nespecially for its wide applications in biology, social network, economy and\nindustry. Compared with static link prediction, dynamic one is much more\ndifficult since network structure evolves over time. Currently most researches\nfocus on static link prediction which cannot achieve expected performance in\ndynamic network. Aiming at low AUC, high Error Rate, add/remove link prediction\ndifficulty, we propose GC-LSTM, a Graph Convolution Network (GC) embedded Long\nShort Term Memory network (LTSM), for end-to-end dynamic link prediction. To\nthe best of our knowledge, it is the first time that GCN embedded LSTM is put\nforward for link prediction of dynamic networks. GCN in this new deep model is\ncapable of node structure learning of network snapshot for each time slide,\nwhile LSTM is responsible for temporal feature learning for network snapshot.\nBesides, current dynamic link prediction method can only handle removed links,\nGC-LSTM can predict both added or removed link at the same time. Extensive\nexperiments are carried out to testify its performance in aspects of prediction\naccuracy, Error Rate, add/remove link prediction and key link prediction. The\nresults prove that GC-LSTM outperforms current state-of-art method.",
+        "author": "Jinyin Chen, Xueke Wang, Xuanheng Xu",
+        "link": "http://arxiv.org/abs/1812.04206v2",
+        "category": [
+            "cs.SI",
+            "physics.soc-ph"
+        ]
+    },
+    "latex_extraction": {}
+}
