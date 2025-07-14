@@ -20,7 +20,8 @@
 
 ​**AutoMind**​ is an advanced LLM agent framework that automates end-to-end machine learning pipelines by dynamically integrating domain expertise, strategic solution exploration, and adaptive code generation. Unlike rigid workflow-based agents, AutoMind mimics human practitioners' empirical insights to solve complex, real-world data science challenges.
 
-> Note: Due to some variance in the results from a single run, **multiple runs are recommended** for more reliable performance.
+> [!IMPORTANT]
+> Due to some variance in the results from a single run, **multiple runs are recommended** for more reliable performance.
 
 ​🏆 **AutoMind**​ was evaluated on two automated data science benchmarks using different foundation model families. Our results demonstrate superior performance over baselines on both benchmarks: 
 1. On the OpenAI's [MLE-bench](https://arxiv.org/pdf/2410.07095), AutoMind surpassed ​56.8%​​ of human participants - representing a ​13.5% improvement​ over prior state-of-the-art (AIDE).
@@ -54,7 +55,8 @@ AutoMind revolutionizes LLM-driven data science automation by overcoming rigid w
 🔍 **Expert Knowledge Base**  
 Aggregates human expertise from 455 Kaggle competitions (3,237 top solutions) and top-tier research papers via intelligent hierarchical labeling.
 
-> Note: Solutions from the same task as the test task will be identified and discarded after knowledge recall to to **prevent the agent from plagiarism**.
+> [!Note]
+> Solutions from the same task as the test task will be identified and discarded after knowledge recall to to **prevent the agent from plagiarism**.
 
 Dynamically explores solutions through drafting/improving/debugging cycles, generating validated plan-code-metric nodes.  
 
