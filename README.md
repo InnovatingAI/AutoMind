@@ -20,6 +20,8 @@
 
 ​**AutoMind**​ is an advanced LLM agent framework that automates end-to-end machine learning pipelines by dynamically integrating domain expertise, strategic solution exploration, and adaptive code generation. Unlike rigid workflow-based agents, AutoMind mimics human practitioners' empirical insights to solve complex, real-world data science challenges.
 
+> Note: Due to some variance in the results from a single run, **multiple runs are recommended** for more reliable performance.
+
 ​🏆 **AutoMind**​ was evaluated on two automated data science benchmarks using different foundation model families. Our results demonstrate superior performance over baselines on both benchmarks: 
 1. On the OpenAI's [MLE-bench](https://arxiv.org/pdf/2410.07095), AutoMind surpassed ​56.8%​​ of human participants - representing a ​13.5% improvement​ over prior state-of-the-art (AIDE).
 2. Comprehensive efficiency analysis revealed ​300% increased efficiency and ​63% lower token costs​ compared to previous SOTA approaches.
@@ -50,9 +52,10 @@
 AutoMind revolutionizes LLM-driven data science automation by overcoming rigid workflows with three breakthroughs:  
 
 🔍 **Expert Knowledge Base**  
-Aggregates human expertise from 455 Kaggle competitions (3,237 top solutions) and top-tier research papers via intelligent hierarchical labeling.  
+Aggregates human expertise from 455 Kaggle competitions (3,237 top solutions) and top-tier research papers via intelligent hierarchical labeling.
 
-🌳 **Agentic Knowledge Tree Search**  
+> Note: Solutions from the same task as the test task will be identified and discarded after knowledge recall to to **prevent the agent from plagiarism**.
+
 Dynamically explores solutions through drafting/improving/debugging cycles, generating validated plan-code-metric nodes.  
 
 ⌨️ **Self-Adaptive Coding**  
@@ -141,9 +144,7 @@ Then you should run the following command:
 bash scripts/run_mle_bench.sh
 ```
 
-This script will build the Docker image as well as container for AutoMind and run the agent on the MLE-Bench dataset. The results will be saved in the `mle-bench/logs` directory.
-
-
+This script will build both the Docker image and container for AutoMind, then run the agent on the MLE-Bench dataset. The results will be saved in the mle-bench/logs directory.
 
 ## 🌻Acknowledgement
 
