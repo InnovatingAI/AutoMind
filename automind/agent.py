@@ -341,7 +341,8 @@ class Agent:
             improved_code, exec_result = self.coder.step(
                 plan=improved_plan,
                 data_analysis=self._data_analysis if self.analyzer else None,
-                based_code=wrap_code(parent_node.code),
+                # based_code=wrap_code(parent_node.code),
+                based_code="",
             )
         new_node = Node(
             plan=improved_plan,
@@ -376,7 +377,8 @@ class Agent:
             improved_code, exec_result = self.coder.step(
                 plan=improved_plan,
                 data_analysis=self._data_analysis if self.analyzer else None,
-                based_code=wrap_code(parent_node.code),
+                # based_code=wrap_code(parent_node.code),
+                based_code="",
             )
         new_node = Node(
             plan=improved_plan,
@@ -401,7 +403,8 @@ class Agent:
         debugged_code, exec_result = self.coder.step(
             plan=debugged_plan,
             data_analysis=self._data_analysis if self.analyzer else None,
-            based_code=wrap_code(parent_node.code),
+            # based_code=wrap_code(parent_node.code),
+            based_code="",
         )
         new_node = Node(
             plan=debugged_plan,

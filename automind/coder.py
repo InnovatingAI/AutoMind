@@ -108,6 +108,11 @@ class OneShotCoder(Coder):
             "Try to accelerate the model training process if any GPU is available.",
             "DO NOT display progress bars. If you have to use function intergrated with progress bars, disable progress bars or using the appropriate parameter to silence them.",
             "Don't do Exploratory Data Analysis.",
+            "**CRITICAL: Since execution time is limited, implement periodic inference and submission saving during training. Every few epochs (e.g., every 5-10 epochs), perform inference on test data and overwrite both the submission.csv and eval_metric.txt files. This ensures that even if training is interrupted, you have the latest usable predictions and evaluation metrics.**",
+            "DO NOT add memory monitoring code using psutil or similar libraries.",
+            "DO NOT add logging or printing statements inside training loops, batch loops, or any repetitive operations.",
+            "Avoid printing detailed model architecture information unless debugging. When debugging model issues, use concise shape tracking during forward pass to quickly identify problematic layers without verbose model summaries.", 
+            "When debugging data-related errors, please refer to the data analysis section first for insights about data structure and format.",
         ]
         return {"Code guideline": code_guideline}
 
@@ -126,7 +131,7 @@ class OneShotCoder(Coder):
         based_code: Optional[str] = None,
     ):
         prompt = self._prompt_introduction
-        prompt["Task Description"] = self.task_desc
+        # prompt["Task Description"] = self.task_desc
         prompt["Proposed Solution"] = plan
 
         if based_code:
@@ -242,6 +247,11 @@ class StepByStepCoder(Coder):
             "DO NOT display progress bars. If you have to use function intergrated with progress bars, disable progress bars or using the appropriate parameter to silence them.",
             # "Always add 'import os\nos.environ[\"TQDM_DISABLE\"] = \"1\"' at the beginning of your code to disable progress bars. Always deactivate pytorch internal progress bars by setting, for example, 'prefetch_factor=None'",
             "Don't do Exploratory Data Analysis.",
+            "**CRITICAL: Since execution time is limited, implement periodic inference and submission saving during training. Every few epochs (e.g., every 5-10 epochs), perform inference on test data and overwrite both the submission.csv and eval_metric.txt files. This ensures that even if training is interrupted, you have the latest usable predictions and evaluation metrics.**",
+            "DO NOT add memory monitoring code using psutil or similar libraries.",
+            "DO NOT add logging or printing statements inside training loops, batch loops, or any repetitive operations.",
+            "Avoid printing detailed model architecture information unless debugging. When debugging model issues, use concise shape tracking during forward pass to quickly identify problematic layers without verbose model summaries.", 
+            "When debugging data-related errors, please refer to the data analysis section first for insights about data structure and format.",
         ]
         return {"Code guideline": code_guideline}
 
@@ -374,7 +384,7 @@ class StepByStepCoder(Coder):
     ):
 
         prompt = self._prompt_introduction
-        prompt["Task Description"] = self.task_desc
+        # prompt["Task Description"] = self.task_desc
         prompt["Current Step"] = str(step_plan)
         if prev_steps_code:
             prompt["Previous Steps Code"] = (
