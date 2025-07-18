@@ -56,7 +56,7 @@ AutoMind revolutionizes LLM-driven data science automation by overcoming rigid w
 Aggregates human expertise from 455 Kaggle competitions (3,237 top solutions) and top-tier research papers via intelligent hierarchical labeling.
 
 > [!Note]
-> Solutions from the same task as the test task will be identified and discarded after knowledge recall to to **prevent the agent from plagiarism**.
+> Solutions from the same task as the test task will be identified and discarded after knowledge recall to **prevent the agent from plagiarism**.
 
 Dynamically explores solutions through drafting/improving/debugging cycles, generating validated plan-code-metric nodes.  
 
