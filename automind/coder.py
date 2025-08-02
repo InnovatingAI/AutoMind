@@ -94,6 +94,7 @@ class OneShotCoder(Coder):
             "The code should **implement the proposed solution** and **print the value of the evaluation metric computed on a hold-out validation set**,",
             "**AND MOST IMPORTANTLY SAVE PREDICTIONS ON THE PROVIDED UNLABELED TEST DATA IN A `submission.csv` FILE IN THE ./submission/ DIRECTORY.**",
             "The code should save the evaluation metric computed on the hold-out validation set in a `eval_metric.txt` file in the ./submission/ directory.",
+            "**DO NOT HARDCODE OR FAKE THE EVALUATION METRIC VALUE. The metric must be computed from actual model performance on validation data.**",
             "The code should be a single-file python program that is self-contained and can be executed as-is.",
             "No parts of the code should be skipped, don't terminate the code before finishing the script.",
             "DO NOT WRAP THE CODE IN A MAIN FUNCTION, BUT WRAP ALL CODE in the '__main__' module, or it cannot be executed successfully.",
@@ -218,11 +219,12 @@ class StepByStepCoder(Coder):
     @property
     def _prompt_code_guideline(self):
         code_guideline = [
-            "You should first provide suggestions for the current step based on the previous steps and the failed last try step if provided, and then implement the current step of the solution plan.",
+            "You should implement the current step of the solution plan based on the previous steps and the failed last try step if provided.",
             "**You should ONLY implement the code for the current step of the solution plan, rather than the entire solution plan.**",
             "DO NOT MODIFY THE CURRENT STEP. You should implement the current step exactly as it is.",
             "You should **print the value of the evaluation metric computed on a hold-out validation set** if it is calculated in the current step.",
             "You should save the evaluation metric computed on the hold-out validation set in a `eval_metric.txt` file in the ./submission/ directory if it is calculated in the current step.",
+            "**DO NOT HARDCODE OR FAKE THE EVALUATION METRIC VALUE. The metric must be computed from actual model performance on validation data.**",
             "DO NOT PRINT ANYTHING ELSE IN THE CODE, except for the evaluation metric and completion message for the current step.",
             "The code should be a single-file python program that is self-contained and can be executed as-is.",
             "DO NOT WRAP THE CODE IN A MAIN FUNCTION, BUT WRAP ALL CODE in the '__main__' module, or it cannot be executed successfully.",
@@ -249,8 +251,7 @@ class StepByStepCoder(Coder):
     def _prompt_resp_fmt(self):
         return {
             "Response format": (
-                "First, provide suggestions for the current step based on the previous steps and the failed last try step if provided (wrapped in <think></think>). "
-                "Then, provide a single markdown code block (wrapped in ```) which implements the current step of a solution plan. "
+                "Your response should be a single markdown code block (wrapped in ```) which implements the current step of a solution plan. "
             )
         }
 
@@ -444,16 +445,15 @@ class StepByStepCoder(Coder):
                 temperature=0.5,
             )
 
-            thoughts = extract_xml(response, "think")
             # Extract the code from the response
             step_code = extract_code(response)
 
             if step_code:
                 # Delete the lines that import the code of the previous steps
-                # Regular expression matches multiple lines starting with “from prev_steps import (”
+                # Regular expression matches multiple lines starting with "from prev_steps import ("
                 pattern = r"from\s+prev_steps\s+import\s+\(.*?\)"
                 step_code = re.sub(pattern, "", step_code, flags=re.DOTALL)
-                # Regular expression matches single line starting with “from prev_steps import”
+                # Regular expression matches single line starting with "from prev_steps import"
                 pattern = r"from\s+prev_steps\s+import\s+.*?\n"
                 step_code = re.sub(pattern, "", step_code)
 
@@ -465,7 +465,7 @@ class StepByStepCoder(Coder):
                     ast.parse(code)
                     # TODO: check the plan-code consistency before return code
                     logger.info(
-                        f"Code generation successed for step {len(self._prev_steps)+1} of {len(self._plan_list)}. Implemented code: \n\n{step_code}\n\nThoughts: \n\n{thoughts}\n\n"
+                        f"Code generation successed for step {len(self._prev_steps)+1} of {len(self._plan_list)}. Implemented code: \n\n{step_code}\n\n"
                     )
                     return step_code, code
                 except Exception as e:
