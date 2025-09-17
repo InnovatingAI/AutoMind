@@ -13,6 +13,11 @@ ENV CODE_DIR=${CODE_DIR}
 ARG AGENT_DIR
 ENV AGENT_DIR=${AGENT_DIR}
 
+# [Optional] Set Hugging Face mirror
+ENV HF_ENDPOINT=https://hf-mirror.com
+ENV TRANSFORMERS_CACHE=/tmp/transformers_cache
+ENV HF_HOME=/tmp/huggingface_cache
+
 # put all the agent files in the expected location
 RUN mkdir ${AGENT_DIR}/automind
 COPY ./automind ${AGENT_DIR}/automind

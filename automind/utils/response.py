@@ -324,3 +324,26 @@ def delete_debug_inform(code):
 
 def clean_string(str):
     return re.sub(r"[^\w\s]", "", str).strip().lower()
+
+def extract_diff_blocks(response: str):
+    """Extract SEARCH/REPLACE diff blocks from response"""
+    pattern = r'<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE'
+    matches = re.findall(pattern, response, re.DOTALL)
+    return [(search.strip(), replace.strip()) for search, replace in matches]
+
+def apply_diff_to_code(code: str, diff_blocks: list) -> str:
+    """Apply diff blocks to code"""
+    modified_code = code
+    for search, replace in diff_blocks:
+        if search in modified_code:
+            modified_code = modified_code.replace(search, replace)
+        else:
+            logger.warning(f"Search block not found in code:\n{search}")
+    
+    # Clean up any remaining diff markers
+    modified_code = re.sub(r'<<<<<<< SEARCH.*?=======.*?>>>>>>> REPLACE', '', modified_code, flags=re.DOTALL)
+    modified_code = re.sub(r'<<<<<<< SEARCH', '', modified_code)
+    modified_code = re.sub(r'=======', '', modified_code)
+    modified_code = re.sub(r'>>>>>>> REPLACE', '', modified_code)
+    
+    return modified_code

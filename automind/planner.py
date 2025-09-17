@@ -109,6 +109,7 @@ class OneShotPlanner(Planner):
             "The data is already prepared and available in the `./input` directory. There is no need to unzip any files.",
             "The solution should use os.walk to get the paths of all available files in the `. /input` directory for data loading.",
             "If a `sample_submission.csv` file existes, directly load it and use it as a template for the `submission.csv` file. The solution should save predictions on the provide unlabeled test data in the `submission.csv` file in the ./submission/ directory.",
+            "Prefer and explicitly use GPU (CUDA) acceleration when available: move models/tensors to GPU and handle CPU fallback if CUDA is not present.",
         ]
         if self.memory:
             plan_guideline.append(
@@ -477,6 +478,7 @@ class KnowledgePlanner(OneShotPlanner):
             "DO NOT CHEAT ON EVALUATION. The solution should calculate the evaluation metric described in the task description on a hold-out validation set.",
             "If the evaluation metric is not provided, you should propose a reasonable evaluation metric for the task and calculate it.",
             "The solution should print the evaluation metric computed on the hold-out validation set at the last step of the solution.",
+            "Prefer and explicitly use GPU (CUDA) acceleration when available; ensure the plan indicates moving models/tensors to GPU with CPU fallback.",
         ]
         return {"Abstract plan constraints": abstract_plan_constraints}
 
@@ -594,6 +596,7 @@ class KnowledgePlanner(OneShotPlanner):
             "DO NOT CHEAT ON EVALUATION. The solution should calculate the evaluation metric described in the task description on a hold-out validation set.",
             "If the evaluation metric is not provided, you should propose a reasonable evaluation metric for the task and calculate it.",
             "The solution should print the evaluation metric computed on the hold-out validation set at the last step of the solution.",
+            "Prefer and explicitly use GPU (CUDA) acceleration when available; explicitly place models/tensors on GPU and provide CPU fallback.",
         ]
         return {"Detailed plan constraints": detailed_plan_constraints}
 

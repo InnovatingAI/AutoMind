@@ -299,6 +299,11 @@ class OneShotImprover(Improver):
                     f"Plan generation successed. Improved plan: \n\n{plan_text}\n\nProposed improvement: \n\n{think_text}\n\n"
                 )
                 return plan_text, self.knowledge
+            elif plan_text:
+                logger.warning(
+                    f"Plan generation successed but think text is missing. Improved plan: \n\n{plan_text}\n\n"
+                )
+                return plan_text, self.knowledge
             else:
                 logger.info(f"Plan generation failed, retrying...")
 

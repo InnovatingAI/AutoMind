@@ -402,6 +402,8 @@ class Agent:
             plan=debugged_plan,
             data_analysis=self._data_analysis if self.analyzer else None,
             based_code=wrap_code(parent_node.code),
+            is_debug=True,
+            # retry=3,
         )
         new_node = Node(
             plan=debugged_plan,

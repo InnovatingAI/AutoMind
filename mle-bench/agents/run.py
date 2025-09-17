@@ -4,6 +4,7 @@ import threading
 from pathlib import Path
 import docker
 from docker.models.containers import Container
+import codecs
 
 from agents.registry import Agent
 from environment.utils import (
@@ -101,10 +102,23 @@ def execute_agent(
         cmd += [f"{key}={value}" for key, value in agent.kwargs.items()]
 
     logger.info("Running agent...")
-    exit_code, output = container.exec_run(cmd, stream=True, user="nonroot")
 
-    for chunk in output:
-        logger.info(f"[Container] {chunk.decode('utf-8').strip()}")
+    exit_code, stream = container.exec_run(cmd, stream=True, user="nonroot")
+    decoder = codecs.getincrementaldecoder('utf-8')('replace')
+
+    for chunk in stream:
+        if not chunk:
+            continue
+        text = decoder.decode(chunk)
+        if text:
+            logger.info(f"[Container] {text.rstrip()}")
+
+    tail = decoder.decode(b'', final=True)
+    if tail:
+        logger.info(f"[Container] {tail.rstrip()}")
+
+    if isinstance(exit_code, int) and exit_code != 0:
+        logger.warning(f"Agent process exited with code {exit_code}")
 
 
 def clean_up(
@@ -186,13 +200,13 @@ def run_in_container(
     try:
         time_start = time.monotonic()
         container.start()
-        exit_code, _ = container.exec_run(
-            'timeout 60s sh -c "while ! curl -s http://localhost:5000/health > /dev/null; do sleep 1; done"'
-        )
-        if exit_code != 0:
-            raise RuntimeError(
-                "The grading server failed to start within 60 seconds. This is likely due to an error in `entrypoint.sh`; check the logs."
-            )
+        # exit_code, _ = container.exec_run(
+        #     'timeout 60s sh -c "while ! curl -s http://localhost:5000/health > /dev/null; do sleep 1; done"'
+        # )
+        # if exit_code != 0:
+        #     raise RuntimeError(
+        #         "The grading server failed to start within 60 seconds. This is likely due to an error in `entrypoint.sh`; check the logs."
+        #     )
         execute_agent(container, agent, logger, run_dir, container_config)
         save_output(container, run_dir, container_config)
         time_end = time.monotonic()
