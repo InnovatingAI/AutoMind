@@ -5,12 +5,13 @@
   <a href="https://innovatingAI.github.io/" target="_blank">🌐Project</a> •
   <a href="https://arxiv.org/abs/2506.10974" target="_blank">📄Paper</a> •
   <a href="https://huggingface.co/papers/2506.10974" target="_blank">🤗HFPaper</a> •
+  <a href="https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link" target="_blank">📦Runtime</a> •
   <a href="https://x.com/zxlzr/status/1933828029035532699" target="_blank">𝕏 Blog</a>
 </h4>
 
 ![](https://img.shields.io/badge/python-3.10+-blue.svg)
-![](https://img.shields.io/badge/version-v0.0.1-green)
-![](https://img.shields.io/github/last-commit/zjunlp/DynamicKnowledgeCircuits?color=green) 
+![](https://img.shields.io/badge/version-v1.0.0-green)
+![](https://img.shields.io/badge/last_commit-Sep-orange) 
 ![](https://img.shields.io/badge/PRs-Welcome-red)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -24,7 +25,7 @@
 > Due to some variance in the results from a single run, **multiple runs are recommended** for more reliable performance.
 
 ​🏆 **AutoMind**​ was evaluated on two automated data science benchmarks using different foundation model families. Our results demonstrate superior performance over baselines on both benchmarks: 
-1. On the OpenAI's [MLE-bench](https://arxiv.org/pdf/2410.07095), AutoMind surpassed ​56.8%​​ of human participants - representing a ​13.5% improvement​ over prior state-of-the-art (AIDE).
+1. On the OpenAI's [MLE-bench](https://arxiv.org/pdf/2410.07095), AutoMind surpassed ​61.0%​​ of human participants - representing a ​9.7% improvement​ over prior state-of-the-art (AIDE).
 2. Comprehensive efficiency analysis revealed ​300% increased efficiency and ​63% lower token costs​ compared to previous SOTA approaches.
 
 ✨ More specifically, **AutoMind** revolutionizes automated data science with these breakthrough features:  
@@ -33,6 +34,8 @@
 3. **A self-adaptive coding strategy**: Dynamically adjusts code generation complexity based on task requirements, moving beyond rigid workflows to deliver context-aware implementations—from simple scripts to cutting-edge solutions.  
 
 ## 🔔News
+
+- <strong>[2025-09-17]</strong> Refactored coder code generation (debug/improve now do search-and-replace of code blocks, not full rewrites), tuned prompts to handle more corner cases, and fixed several bugs. AutoMind is now more robust, more stable, and achieves better results.
 
 - <strong>[2025-07-13]</strong> We open-source the code for AutoMind. Thanks to all contributors for their great efforts!
 
@@ -43,6 +46,7 @@
 - 🌟<a href="#overview">Overview</a>
 - 🔧<a href="#environment-setup">Environment Setup</a>
 - ⏩<a href="#running">Running</a>
+- 📦<a href="#runtime">Runtime</a>
 - 🌻<a href="#acknowledgement">Acknowledgement</a>
 - 🚩<a href="#citation">Citation</a>
 - <a href="#contributors">Contributors</a>
@@ -89,7 +93,7 @@ git lfs pull
 
 The original MLE-bench dataset is a collection of 75 Kaggle competitions, which is a particularly resource-intensive benchmark to run. A single run of the original experiment setup of 24 hours per competition attempt requires 24 hours × 75 competitions = 1800 GPU hours of compute. Furthermore, running agents for the whole duration is very token-intensive.
 
-Alternatively, you can download the [subset](mle-bench/experiments/splits/automind.txt) of MLE-Bench which consists of 16 competions used in our experiments via the following scripts:
+Alternatively, you can download the [subset](mle-bench/experiments/splits/automind.txt) of MLE-Bench which consists of 15 competitions used in our experiments via the following scripts:
 
 ```
 mlebench prepare --automind 
@@ -147,6 +151,18 @@ bash scripts/run_mle_bench.sh
 ```
 
 This script will build both the Docker image and container for AutoMind, then run the agent on the MLE-Bench dataset. The results will be saved in the mle-bench/logs directory.
+
+## 📦Runtime
+
+You can download the complete runtime package from the header link or here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
+
+Automind_runtime contains:
+- data: Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
+- runs: Complete runtimes for AutoMind and variants/baselines:
+  - automind, automind_o3_mini (AutoMind with o3-mini as base model), automindwo_knowledge (AutoMind without the knowledge module)
+  - aide_v3 and aide_o3_mini baselines
+  Each includes logs, submissions, solution code, and time-stamped intermediate results.
+- traj: For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
 
 ## 🌻Acknowledgement
 

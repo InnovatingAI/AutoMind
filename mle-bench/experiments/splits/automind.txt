@@ -8,7 +8,6 @@ lmsys-chatbot-arena
 us-patent-phrase-to-phrase-matching
 mlsp-2013-birds
 statoil-iceberg-classifier-challenge
-petfinder-pawpularity-score
 tensorflow-speech-recognition-challenge
 denoising-dirty-documents
 new-york-city-taxi-fare-prediction
