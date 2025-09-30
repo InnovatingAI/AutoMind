@@ -35,6 +35,8 @@
 
 ## 🔔News
 
+- <strong>[2025-09-30]</strong> Re-ran experiments with the updated codebase, achieving more stable and higher performance metrics. Collected experiment runtime are now available in the 📦Runtime section.
+
 - <strong>[2025-09-17]</strong> Refactored coder code generation (debug/improve now do search-and-replace of code blocks, not full rewrites), tuned prompts to handle more corner cases, and fixed several bugs. AutoMind is now more robust, more stable, and achieves better results.
 
 - <strong>[2025-07-13]</strong> We open-source the code for AutoMind. Thanks to all contributors for their great efforts!
@@ -44,9 +46,9 @@
 ## Table of Contents
 
 - 🌟<a href="#overview">Overview</a>
+- 📦<a href="#runtime">Runtime</a>
 - 🔧<a href="#environment-setup">Environment Setup</a>
 - ⏩<a href="#running">Running</a>
-- 📦<a href="#runtime">Runtime</a>
 - 🌻<a href="#acknowledgement">Acknowledgement</a>
 - 🚩<a href="#citation">Citation</a>
 - <a href="#contributors">Contributors</a>
@@ -68,6 +70,18 @@ Dynamically explores solutions through drafting/improving/debugging cycles, gene
 Generates single-pass code for simple tasks vs. Abstract Syntax Tree(AST) verified stepwise execution for complex pipelines.  
 
 ![framework](assets/framework.png)
+
+## 📦Runtime
+
+You can find all experiment logs, solution code, and intermediate results in the complete runtime package, available from the header link or directly here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
+
+Automind_runtime contains:
+- data: Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
+- runs: Complete runtimes for AutoMind and variants/baselines:
+  - automind, automind_o3_mini (AutoMind with o3-mini as base model), automindwo_knowledge (AutoMind without the knowledge module)
+  - aide_v3 and aide_o3_mini baselines
+  Each includes logs, submissions, solution code, and time-stamped intermediate results.
+- traj: For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
 
 ## 🔧Environment Setup
 
@@ -151,18 +165,6 @@ bash scripts/run_mle_bench.sh
 ```
 
 This script will build both the Docker image and container for AutoMind, then run the agent on the MLE-Bench dataset. The results will be saved in the mle-bench/logs directory.
-
-## 📦Runtime
-
-You can download the complete runtime package from the header link or here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
-
-Automind_runtime contains:
-- data: Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
-- runs: Complete runtimes for AutoMind and variants/baselines:
-  - automind, automind_o3_mini (AutoMind with o3-mini as base model), automindwo_knowledge (AutoMind without the knowledge module)
-  - aide_v3 and aide_o3_mini baselines
-  Each includes logs, submissions, solution code, and time-stamped intermediate results.
-- traj: For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
 
 ## 🌻Acknowledgement
 
