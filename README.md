@@ -73,15 +73,17 @@ Generates single-pass code for simple tasks vs. Abstract Syntax Tree(AST) verifi
 
 ## 📦Runtime
 
-You can find all experiment logs, solution code, and intermediate results in the complete runtime package, available from the header link or directly here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
+You can find the full datasets (data), experiment logs, solutions, and intermediate results in the complete runtime package, available from the header link or directly here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
 
-Automind_runtime contains:
-- data: Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
-- runs: Complete runtimes for AutoMind and variants/baselines:
+Automind_runtime contains (approximate sizes):
+- data (~33G): Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
+- runs (~179G): Complete runtimes for AutoMind and variants/baselines:
   - automind, automind_o3_mini (AutoMind with o3-mini as base model), automindwo_knowledge (AutoMind without the knowledge module)
   - aide_v3 and aide_o3_mini baselines
   Each includes logs, submissions, solution code, and time-stamped intermediate results.
-- traj: For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
+- traj (~197M): For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
+
+Overall size of the complete runtime package: ~212G.
 
 ## 🔧Environment Setup
 
