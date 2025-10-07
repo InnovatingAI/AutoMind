@@ -1,5 +1,5 @@
 vars:
-  step_count: &step_count 500
+  step_count: &step_count 2000
   time_limit: &time_limit 86400 # 24 hrs
 
 defaults: &defaults

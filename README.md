@@ -1,20 +1,6 @@
 <div align="center">
 <h2 align="center">AutoMind: Adaptive Knowledgeable Agent for Automated Data Science</p>
 
-<h4 align="center">
-  <a href="https://innovatingAI.github.io/" target="_blank">🌐Project</a> •
-  <a href="https://arxiv.org/abs/2506.10974" target="_blank">📄Paper</a> •
-  <a href="https://huggingface.co/papers/2506.10974" target="_blank">🤗HFPaper</a> •
-  <a href="https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link" target="_blank">📦Runtime</a> •
-  <a href="https://x.com/zxlzr/status/1933828029035532699" target="_blank">𝕏 Blog</a>
-</h4>
-
-![](https://img.shields.io/badge/python-3.10+-blue.svg)
-![](https://img.shields.io/badge/version-v1.0.0-green)
-![](https://img.shields.io/badge/last_commit-Sep-orange) 
-![](https://img.shields.io/badge/PRs-Welcome-red)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ---
 
 </div>
@@ -171,23 +157,3 @@ This script will build both the Docker image and container for AutoMind, then ru
 ## 🌻Acknowledgement
 
 Our code for Agentic Knowledgeable Tree Search is built on top of [aideml](https://github.com/WecoAI/aideml/) framework. Our code for evaluation is implemented based on OpenAI's [mle-bench](https://github.com/openai/mle-bench). We thank all authors for their great contributions!
-
-## 🎉Contributors
-
-<a href="https://github.com/innovatingAI/AutoMind/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=innovatingAI/AutoMind" /></a>
-
-We will offer long-term maintenance to fix bug for the project. Welcome for issues and PRs!
-
-## 🚩Citation
-
-Please cite our paper if you find AutoMind is useful in your work. Thanks!
-
-```
-@article{ou2025automind,
-  title={AutoMind: Adaptive Knowledgeable Agent for Automated Data Science},
-  author={Ou, Yixin and Luo, Yujie and Zheng, Jingsheng and Wei, Lanning and Qiao, Shuofei and Zhang, Jintian and Zheng, Da and Chen, Huajun and Zhang, Ningyu},
-  journal={arXiv preprint arXiv:2506.10974},
-  year={2025}
-}
-```
