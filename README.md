@@ -19,16 +19,6 @@
 2. **An agentic knowledge tree search algorithm**: Strategically explores solution spaces through a structured search approach, dynamically navigating possible paths to optimize problem-solving efficiency and effectiveness.  
 3. **A self-adaptive coding strategy**: Dynamically adjusts code generation complexity based on task requirements, moving beyond rigid workflows to deliver context-aware implementations—from simple scripts to cutting-edge solutions.
 
-## Table of Contents
-
-- 🌟<a href="#overview">Overview</a>
-- 📦<a href="#runtime">Runtime</a>
-- 🔧<a href="#environment-setup">Environment Setup</a>
-- ⏩<a href="#running">Running</a>
-- 🌻<a href="#acknowledgement">Acknowledgement</a>
-- 🚩<a href="#citation">Citation</a>
-- <a href="#contributors">Contributors</a>
-
 
 ## 🌟Overview
 
