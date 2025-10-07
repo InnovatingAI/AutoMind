@@ -17,17 +17,7 @@
 ✨ More specifically, **AutoMind** revolutionizes automated data science with these breakthrough features:  
 1. **An expert knowledge base for data science**: Curated from domain expertise to ground the agent in empirical best practices, overcoming LLMs' inherent lack of human practitioner experience. This enables handling of complex, innovative tasks beyond classical problems.  
 2. **An agentic knowledge tree search algorithm**: Strategically explores solution spaces through a structured search approach, dynamically navigating possible paths to optimize problem-solving efficiency and effectiveness.  
-3. **A self-adaptive coding strategy**: Dynamically adjusts code generation complexity based on task requirements, moving beyond rigid workflows to deliver context-aware implementations—from simple scripts to cutting-edge solutions.  
-
-## 🔔News
-
-- <strong>[2025-09-30]</strong> Re-ran experiments with the updated codebase, achieving more stable and higher performance metrics. Collected experiment runtime are now available in the 📦Runtime section.
-
-- <strong>[2025-09-17]</strong> Refactored coder code generation (debug/improve now do search-and-replace of code blocks, not full rewrites), tuned prompts to handle more corner cases, and fixed several bugs. AutoMind is now more robust, more stable, and achieves better results.
-
-- <strong>[2025-07-13]</strong> We open-source the code for AutoMind. Thanks to all contributors for their great efforts!
-
-- <strong>[2025-06-13]</strong> We release our paper [AutoMind: Adaptive Knowledgeable Agent for Automated Data Science](https://arxiv.org/abs/2506.10974).
+3. **A self-adaptive coding strategy**: Dynamically adjusts code generation complexity based on task requirements, moving beyond rigid workflows to deliver context-aware implementations—from simple scripts to cutting-edge solutions.
 
 ## Table of Contents
 
