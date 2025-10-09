@@ -35,6 +35,8 @@
 
 ## 🔔News
 
+- <strong>[2025-10-13]</strong> Added 📈Main Results section with the latest experiment results.
+
 - <strong>[2025-09-30]</strong> Re-ran experiments with the updated codebase, achieving more stable and higher performance metrics. Collected experiment runtime are now available in the 📦Runtime section.
 
 - <strong>[2025-09-17]</strong> Refactored coder code generation (debug/improve now do search-and-replace of code blocks, not full rewrites), tuned prompts to handle more corner cases, and fixed several bugs. AutoMind is now more robust, more stable, and achieves better results.
@@ -46,6 +48,7 @@
 ## Table of Contents
 
 - 🌟<a href="#overview">Overview</a>
+- 📈<a href="#main-results">Main Results</a>
 - 📦<a href="#runtime">Runtime</a>
 - 🔧<a href="#environment-setup">Environment Setup</a>
 - ⏩<a href="#running">Running</a>
@@ -71,6 +74,14 @@ Generates single-pass code for simple tasks vs. Abstract Syntax Tree(AST) verifi
 
 ![framework](assets/framework.png)
 
+## 📈Main Results
+
+Main benchmark results (MLE-Bench, all variants).
+
+<!-- GitHub may not render PDF inline; link provided as fallback -->
+
+![Main Results (PDF)](assets/main_result.png)
+
 ## 📦Runtime
 
 You can find the full datasets (data), experiment logs, solutions, and intermediate results in the complete runtime package, available from the header link or directly here: https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link
@@ -78,8 +89,12 @@ You can find the full datasets (data), experiment logs, solutions, and intermedi
 Automind_runtime contains (approximate sizes):
 - data (~33G): Full datasets required to run the tasks, equivalent to the output of running mlebench prepare --automind.
 - runs (~179G): Complete runtimes for AutoMind and variants/baselines:
-  - automind, automind_o3_mini (AutoMind with o3-mini as base model), automindwo_knowledge (AutoMind without the knowledge module)
-  - aide_v3 and aide_o3_mini baselines
+  - Automind_v3 (original version of Automind with deepseek v3 as base model)
+  - Automind_o3_mini (AutoMind with OpenAI's o3-mini as base model)
+  - Automind_wo_knowledge (AutoMind without the knowledge module, under the base model of deepseek v3)
+  - Aide_v3 (Aide baseline with deepseek v3 as base model)
+  - Aide_o3_mini (Aide baseline with OpenAI's o3-mini as base model)
+  
   Each includes logs, submissions, solution code, and time-stamped intermediate results.
 - traj (~197M): For each runtime, the extracted trajectory of iterations from the root node to the best-performing node.
 
@@ -190,4 +205,5 @@ Please cite our paper if you find AutoMind is useful in your work. Thanks!
   journal={arXiv preprint arXiv:2506.10974},
   year={2025}
 }
+```
 ```
