@@ -5,13 +5,14 @@
   <a href="https://innovatingAI.github.io/" target="_blank">🌐Project</a> •
   <a href="https://arxiv.org/abs/2506.10974" target="_blank">📄Paper</a> •
   <a href="https://huggingface.co/papers/2506.10974" target="_blank">🤗HFPaper</a> •
+  <a href="https://huggingface.co/blog/JohnsonZheng03/ml-agent-trick-automind" target="_blank">🛣️MLAgentTricks</a> •
   <a href="https://drive.google.com/drive/folders/1pyZXWPYR262NIXCrzD2NWpJHbdgiLRFR?usp=drive_link" target="_blank">📦Runtime</a> •
   <a href="https://x.com/zxlzr/status/1933828029035532699" target="_blank">𝕏 Blog</a>
 </h4>
 
 ![](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![](https://img.shields.io/badge/version-v1.0.0-green)
-![](https://img.shields.io/badge/last_commit-Sep-orange) 
+![](https://img.shields.io/badge/last_commit-Oct-orange) 
 ![](https://img.shields.io/badge/PRs-Welcome-red)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -35,7 +36,7 @@
 
 ## 🔔News
 
-- <strong>[2025-10-13]</strong> Added 📈Main Results section with the latest experiment results.
+- <strong>[2025-10-9]</strong> Added 📈Main Results section with the latest experiment results and 🛣️Trick Blog section with the lessons we’ve learned along the way. We have posted the tricks blog on 🤗Hugging Face: <a href="https://huggingface.co/blog/JohnsonZheng03/ml-agent-trick-automind" target="_blank">ML-Agent Tricks for AutoMind</a>.
 
 - <strong>[2025-09-30]</strong> Re-ran experiments with the updated codebase, achieving more stable and higher performance metrics. Collected experiment runtime are now available in the 📦Runtime section.
 
@@ -49,6 +50,7 @@
 
 - 🌟<a href="#overview">Overview</a>
 - 📈<a href="#main-results">Main Results</a>
+- 🛣️<a href="#blog">Blog</a>
 - 📦<a href="#runtime">Runtime</a>
 - 🔧<a href="#environment-setup">Environment Setup</a>
 - ⏩<a href="#running">Running</a>
@@ -81,6 +83,12 @@ Main benchmark results (MLE-Bench, all variants).
 <!-- GitHub may not render PDF inline; link provided as fallback -->
 
 ![Main Results (PDF)](assets/main_result.png)
+
+## 🛣️Trick Blog
+
+Over the past few months, we’ve been experimenting with AutoMind on MLE-Bench, and in this post we’ll share some of the lessons we’ve learned along the way — from practical workflow tips and model-specific tuning tricks, to the pitfalls we hit and how we solved them. We’ll also take a step back to reflect on what these experiments reveal about where intelligent agents might be heading next.
+
+👉 Read the full post on 🤗 Hugging Face: https://huggingface.co/blog/JohnsonZheng03/ml-agent-trick-automind
 
 ## 📦Runtime
 
@@ -205,5 +213,4 @@ Please cite our paper if you find AutoMind is useful in your work. Thanks!
   journal={arXiv preprint arXiv:2506.10974},
   year={2025}
 }
-```
 ```
